@@ -24,4 +24,4 @@ import {withAuth} from "@/app/components/WithAuth";
   </>
   )  
 }
-export default  withAuth(Dashboard)
+export default  Dashboard
