@@ -29,20 +29,20 @@ export const TaskContextProvider = ({ children }) => {
   }
 
   const getMatches = async () => {
-    const match = await client.from('matches').select().eq('local_team', 'Argentina')
-    console.log(match)
+
   }
 
-  const loginWithMagicLink = async (email) => {
+
+
+  const loginWithPassword = async (email) => {
     
     setLoading(true);
     
     try {
-      const { error } = await client.auth.signInWithOtp({ email });
+      const { error } = await client.auth.signUp({ email , password });
       if (error) {
         throw error;
       }
-      alert("Revisa tu correo e inicia sesion a través del Magic Link");
     } catch (error) {
       alert(error.message);
     } finally {
@@ -68,7 +68,7 @@ export const TaskContextProvider = ({ children }) => {
     <TaskContext.Provider
       value={{
         scores,
-        loginWithMagicLink,
+        loginWithPassword,
         loading,
         logout,
         getScores,

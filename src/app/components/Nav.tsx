@@ -15,6 +15,7 @@ export const Nav = () => {
               Quiniela Copa America 2024 Crazy Imagine
             </div>
             <div className="flex flex-row gap-4 w-full justify-end">
+              <div>Quiniela</div>
               
             </div>
           </div>

@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.4.0",
     "@supabase/supabase-js": "^2.43.6",
+    "axios": "^1.7.2",
     "next": "14.2.4",
     "next-auth": "^4.24.7",
+    "node-cron": "^3.0.3",
     "react": "^18",
     "react-dom": "^18"
   },

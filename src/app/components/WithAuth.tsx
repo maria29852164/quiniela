@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import {useRouter} from 'next/navigation'
 import {client} from "@/app/supabase/client";
+
 export const withAuth = (WrappedComponent: any) => {
     const AuthComponent = (props: any) => {
         const router = useRouter();

@@ -3,8 +3,9 @@ import {client} from "@/app/supabase/client";
 
 export  async function  middleware(req:NextRequest){
 
-    const session = await client.auth.getSession();
-    if (!session.data.session ) {
+    const user = await client.auth.getUser();
+    console.log(user)
+    if (!user.data.user ) {
         const url = req.nextUrl.clone()
         url.pathname = '/login'
         return NextResponse.redirect(url)
@@ -13,6 +14,7 @@ export  async function  middleware(req:NextRequest){
     }
 
 }
+
 
 export const config={
     matcher: ['/dashboard','/quiniela','/'],
